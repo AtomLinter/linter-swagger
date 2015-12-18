@@ -1,0 +1,27 @@
+{
+  "name": "linter-swagger",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "Lint Swagger files on the fly, using swagger-parser",
+  "keywords": [
+    "swagger", "linter", "atom"
+  ],
+  "repository": "https://github.com/spoike/linter-swagger",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "dependencies": {
+    "swagger-parser": "^3.3.0"
+  }
+}
