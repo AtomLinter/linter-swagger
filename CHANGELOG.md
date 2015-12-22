@@ -1,3 +1,6 @@
+## 0.3.1
+* Fix: Error now shows up at correct file.
+
 ## 0.3.0
 * Permits json and yaml files other than just ending with swagger and file extension.
 
