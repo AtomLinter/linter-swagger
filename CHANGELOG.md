@@ -1,3 +1,6 @@
+## 0.3.2
+* Github repostory moved to AtomLinter organization
+
 ## 0.3.1
 * Fix: Error now shows up at correct file.
 
