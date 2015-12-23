@@ -1,6 +1,8 @@
+## 0.3.3
+* Now reports line and columns. Thanks for the tip @Arcanemagus
+
 ## 0.3.2
 * Github repostory moved to AtomLinter organization
-* Now reports line and columns. Thanks for the tip @Arcanemagus
 
 ## 0.3.1
 * Fix: Error now shows up at correct file.
