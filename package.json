@@ -24,6 +24,7 @@
     }
   },
   "dependencies": {
+    "lodash": "^3.10.1",
     "swagger-parser": "^3.3.0"
   }
 }
