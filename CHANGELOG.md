@@ -1,3 +1,7 @@
+## 0.3.4
+* Implemented better handling for ONE_OF_MISSING syntax errors
+* Simple handling for syntax errors in arrays
+
 ## 0.3.3
 * Now reports line and columns. Thanks for the tip @Arcanemagus
 
