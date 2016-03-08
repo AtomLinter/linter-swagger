@@ -1,5 +1,10 @@
 # linter-swagger
 
+[![Build Status](https://travis-ci.org/AtomLinter/linter-swagger.svg?branch=master)](https://travis-ci.org/AtomLinter/linter-swagger)
+[![bitHound Overall Score](https://www.bithound.io/github/AtomLinter/linter-swagger/badges/score.svg)](https://www.bithound.io/github/AtomLinter/linter-swagger)
+[![bitHound Dependencies](https://www.bithound.io/github/AtomLinter/linter-swagger/badges/dependencies.svg)](https://www.bithound.io/github/AtomLinter/linter-swagger/master/dependencies/npm)
+[![Package version!](https://img.shields.io/apm/v/linter-swagger.svg?style=flat)](https://atom.io/packages/linter-swagger)
+
 This plugin for [Linter][linter] will lint
 [Swagger 2.0 specifications][swagger], both JSON and YAML using
 [`swagger-parser` node package][swagger-parser].
