@@ -1,3 +1,8 @@
+## 0.3.5
+
+* Install Linter automatically #16
+* greenkeeper tasks: Updated `lodash` and `swagger-parser` packages
+
 ## 0.3.4
 * Implemented better handling for ONE_OF_MISSING syntax errors
 * Simple handling for syntax errors in arrays
