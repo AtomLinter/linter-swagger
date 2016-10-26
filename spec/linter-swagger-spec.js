@@ -8,6 +8,7 @@ const lint = provideLinter().lint;
 const petstoreJSONPath = join(__dirname, 'fixtures', 'petstore.json');
 const petstoreYAMLPath = join(__dirname, 'fixtures', 'petstore.yaml');
 const petstoreBadref = join(__dirname, 'fixtures', 'petstore-badref.yaml');
+const anyOfPath = join(__dirname, 'fixtures', 'anyof.yaml');
 
 describe('The Swagger provider for Linter', () => {
   describe('linting JSON files', () => {
@@ -43,7 +44,7 @@ describe('The Swagger provider for Linter', () => {
       );
     });
 
-    describe('checks a file with issues', () => {
+    describe('checks a file with a single issue', () => {
       let editor = null;
 
       beforeEach(() => {
@@ -78,6 +79,26 @@ describe('The Swagger provider for Linter', () => {
         );
       });
     });
+
+    describe('checks a file with multiple issues', () =>
+      it('finds all the messages', () =>
+        waitsForPromise(() =>
+          atom.workspace.open(anyOfPath).then(editor =>
+            lint(editor).then((messages) => {
+              expect(messages[0].type).toBe('Error');
+              expect(messages[0].text).toBe("Data does not match any schemas from 'oneOf'");
+              expect(messages[0].filePath).toBe(anyOfPath);
+              expect(messages[0].range).toEqual([[11, 10], [11, 16]]);
+
+              expect(messages[1].type).toBe('Error');
+              expect(messages[1].text).toBe('Missing required property: $ref');
+              expect(messages[1].filePath).toBe(anyOfPath);
+              expect(messages[1].range).toEqual([[9, 8], [9, 15]]);
+            })
+          )
+        )
+      )
+    );
 
     it('finds nothing wrong with a valid file', () =>
       waitsForPromise(() =>
