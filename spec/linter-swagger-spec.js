@@ -58,23 +58,29 @@ describe('The Swagger provider for Linter', () => {
         );
       });
 
-      it('finds at least one message', () =>
+      it('finds one message', () =>
         waitsForPromise(() =>
           lint(editor).then(messages =>
-            expect(messages.length).toBeGreaterThan(0)
+            expect(messages.length).toBe(1)
           )
         )
       );
 
-      it('verifies the message', () =>
-        waitsForPromise(() =>
+      it('verifies the message', () => {
+        /* eslint-disable no-useless-escape */
+        const msgRegex = new RegExp('Error resolving \\$ref pointer ".+' +
+          '#\/definitions\/INVALIDREFERENCE"\\.\\s+' +
+          'Token "definitions" does not exist\\.', 'g');
+        /* eslint-enable no-useless-escape */
+        return waitsForPromise(() =>
           lint(editor).then((messages) => {
             expect(messages[0].type).toBe('Error');
-            expect(messages[0].text).toBeDefined();
+            expect(messages[0].text).toMatch(msgRegex);
             expect(messages[0].filePath).toBe(petstoreBadref);
+            expect(messages[0].range).toEqual([[0, 0], [0, 14]]);
           })
-        )
-      );
+        );
+      });
     });
 
     it('finds nothing wrong with a valid file', () =>
