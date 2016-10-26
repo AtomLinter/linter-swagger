@@ -65,7 +65,7 @@ describe('The Swagger provider for Linter', () => {
       it('verifies the message', () => {
         waitsForPromise(() => {
           return lint(editor).then(messages => {
-            console.log(messages);
+            console.log(JSON.stringify(messages));
             expect(messages[0].type).toBeDefined();
             expect(messages[0].type).toEqual('Error');
             expect(messages[0].text).toBeDefined();
