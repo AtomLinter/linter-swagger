@@ -1,13 +1,13 @@
 'use babel';
 
-import * as path from 'path';
+import { join } from 'path';
 import { provideLinter } from '../lib/main';
 
 const lint = provideLinter().lint;
 
-const petstoreJSONPath = path.join(__dirname, 'fixtures', 'petstore.json');
-const petstoreYAMLPath = path.join(__dirname, 'fixtures', 'petstore.yaml');
-const petstoreBadref = path.join(__dirname, 'fixtures', 'petstore-badref.yaml');
+const petstoreJSONPath = join(__dirname, 'fixtures', 'petstore.json');
+const petstoreYAMLPath = join(__dirname, 'fixtures', 'petstore.yaml');
+const petstoreBadref = join(__dirname, 'fixtures', 'petstore-badref.yaml');
 
 describe('The Swagger provider for Linter', () => {
   describe('linting JSON files', () => {
@@ -17,9 +17,7 @@ describe('The Swagger provider for Linter', () => {
         Promise.all([
           atom.packages.activatePackage('linter-swagger'),
           atom.packages.activatePackage('language-json'),
-        ]).then(() =>
-          atom.workspace.open(petstoreJSONPath)
-        )
+        ])
       );
     });
 
@@ -41,9 +39,7 @@ describe('The Swagger provider for Linter', () => {
         Promise.all([
           atom.packages.activatePackage('linter-swagger'),
           atom.packages.activatePackage('language-yaml'),
-        ]).then(() =>
-          atom.workspace.open(petstoreYAMLPath)
-        )
+        ])
       );
     });
 
