@@ -23,9 +23,39 @@
       }
     }
   },
+  "scripts": {
+    "test": "apm test",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "atom-package-deps": "^4.0.1",
     "lodash": "^4.6.1",
     "swagger-parser": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "atom": true
+    }
   }
 }
