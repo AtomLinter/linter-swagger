@@ -13,19 +13,21 @@ describe('The Swagger provider for Linter', () => {
   describe('linting JSON files', () => {
     beforeEach(() => {
       atom.workspace.destroyActivePaneItem();
-      waitsForPromise(() => {
-        atom.packages.activatePackage('linter-swagger');
-        return atom.packages.activatePackage('language-json').then(() =>
+      waitsForPromise(() =>
+        Promise.all([
+          atom.packages.activatePackage('linter-swagger'),
+          atom.packages.activatePackage('language-json'),
+        ]).then(() =>
           atom.workspace.open(petstoreJSONPath)
-        );
-      });
+        )
+      );
     });
 
     it('finds nothing wrong with valid file', () => {
       waitsForPromise(() =>
         atom.workspace.open(petstoreJSONPath).then(editor =>
           lint(editor).then(messages =>
-            expect(messages.length).toEqual(0)
+            expect(messages.length).toBe(0)
           )
         )
       );
@@ -35,12 +37,14 @@ describe('The Swagger provider for Linter', () => {
   describe('linting YAML files', () => {
     beforeEach(() => {
       atom.workspace.destroyActivePaneItem();
-      waitsForPromise(() => {
-        atom.packages.activatePackage('linter-swagger');
-        return atom.packages.activatePackage('language-yaml').then(() =>
+      waitsForPromise(() =>
+        Promise.all([
+          atom.packages.activatePackage('linter-swagger'),
+          atom.packages.activatePackage('language-yaml'),
+        ]).then(() =>
           atom.workspace.open(petstoreYAMLPath)
-        );
-      });
+        )
+      );
     });
 
     describe('checks a file with issues', () => {
