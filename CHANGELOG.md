@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.7
+
+*   Many bugfixes and code cleanups
+
 ## 0.3.6
 
 *   Linter now recognizes single quote strings in YAML files, i.e.
