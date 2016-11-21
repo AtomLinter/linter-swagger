@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.8
+
+*   Fix reporting of a single error (#33)
+
 ## 0.3.7
 
 *   Many bugfixes and code cleanups
