@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   version: "1.0.0"
-  title: Invalid API
+  title: Sample 3
 
 paths:
   /users:
@@ -10,7 +10,7 @@ paths:
         default:
           description:  hello world
           schema:
-            anyOf:                  # <--- "anyOf" is not supported by Swagger 2.0.  Only "allOf" is supported.
+            anyOf:
               - properties:
                   firstName:
                     type: string
@@ -22,5 +22,3 @@ paths:
               - properties:
                   age:
                     type: number
-
-# Source: https://github.com/BigstickCarpet/swagger-parser/blob/releases/4.0.0/test/specs/validate-schema/invalid/anyof.yaml

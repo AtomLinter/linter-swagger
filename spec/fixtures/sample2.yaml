@@ -1,0 +1,21 @@
+swagger: "2.0"
+info:
+  title: "Sample 2"
+  version: "1.0.0"
+paths:
+  /todos:
+    get:
+      description: "Returns all todo items"
+      responses:
+        200:
+          description: "A list of todo items"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                  forma: uuid
+                name:
+                  type: string

@@ -1,0 +1,46 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Sample 3"
+    },
+    "paths": {
+        "/users": {
+            "get": {
+                "responses": {
+                    "default": {
+                        "description": "hello world",
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "firstName": {
+                                            "type": "string"
+                                        },
+                                        "lastName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "properties": {
+                                        "middleName": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "properties": {
+                                        "age": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

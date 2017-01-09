@@ -16,7 +16,7 @@ consumes:
   - "application/json"
 produces:
   - "application/json"
-paths: 
+paths:
   /pets:
     get:
       description: "Returns all pets from the system that the user has access to"
