@@ -1,0 +1,41 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample 1",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "tag1",
+      "description": "tag1 description"
+    },
+    {
+      "name": "tag2",
+      "descriptio": "tag2 description"
+    }
+  ],
+  "paths": {
+    "/todos": {
+      "get": {
+        "description": "Returns all todo items",
+        "responses": {
+          "200": {
+            "description": "A list of todo items",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
