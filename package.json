@@ -42,6 +42,7 @@
     "extends": "airbnb-base",
     "rules": {
       "global-require": "off",
+      "import/extensions": ["off", "never"],
       "import/no-unresolved": [
         "error",
         {
