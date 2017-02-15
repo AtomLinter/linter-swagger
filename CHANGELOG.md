@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.9
+
+*   Add note on required trigger for linting (#37)
+*   Update dependencies (#34, #38)
+
 ## 0.3.8
 
 *   Fix reporting of a single error (#33)

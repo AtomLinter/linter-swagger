@@ -1,7 +1,7 @@
 {
   "name": "linter-swagger",
   "main": "./lib/main",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Lint Swagger files on the fly, using swagger-parser",
   "keywords": [
     "swagger",
