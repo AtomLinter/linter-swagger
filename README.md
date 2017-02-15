@@ -20,6 +20,11 @@ apm install linter-swagger
 
 This package will automatically install `linter` if that is missing.
 
+## Usage
+
+This package will automatically lint YAML and JSON files that have a `swagger` field
+with a version number value, in accordance to the [Swagger spec](http://swagger.io/specification/).
+
 ## License
 
 MIT. More info in the [LICENSE file](./LICENSE.md)
