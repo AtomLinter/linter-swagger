@@ -12,8 +12,7 @@ describe('Linting JSON files', () => {
     waitsForPromise(() => Promise.all([
       atom.packages.activatePackage('linter-swagger'),
       atom.packages.activatePackage('language-json'),
-    ]),
-      );
+    ]));
   });
 
 
