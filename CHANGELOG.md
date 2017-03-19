@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+*   Rebuild the validator engine for better error messages (#35)
+
 ## 0.3.9
 
 *   Add note on required trigger for linting (#37)
