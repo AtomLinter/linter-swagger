@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+*   Majorly reduce activation time (#40)
+
 ## 0.4.0
 
 *   Rebuild the validator engine for better error messages (#35)
