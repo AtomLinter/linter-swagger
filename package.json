@@ -31,7 +31,7 @@
     "atom-package-deps": "^4.0.1",
     "swagger-parser": "3.4.1",
     "lodash": "^4.16.4",
-    "yaml-js": "^0.1.4"
+    "yaml-js": "^0.2.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
