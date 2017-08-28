@@ -34,15 +34,18 @@
     "yaml-js": "^0.1.4"
   },
   "devDependencies": {
-    "eslint": "^3.12.0",
-    "eslint-config-airbnb-base": "^11.0.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
     "rules": {
       "global-require": "off",
-      "import/extensions": ["off", "never"],
+      "import/extensions": [
+        "off",
+        "never"
+      ],
       "import/no-unresolved": [
         "error",
         {
