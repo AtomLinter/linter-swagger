@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.2
+
+*   Update `swagger-parser` to v3.4.2 (#46)
+*   Update dependencies (#43, #44, #48)
+
 ## 0.4.1
 
 *   Majorly reduce activation time (#40)
