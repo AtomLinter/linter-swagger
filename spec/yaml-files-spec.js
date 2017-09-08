@@ -3,7 +3,7 @@
 import { join } from 'path';
 import { provideLinter } from '../lib/main';
 
-const lint = provideLinter().lint;
+const { lint } = provideLinter();
 
 
 describe('Linting YAML files', () => {
