@@ -1,5 +1,7 @@
 'use babel';
 
+// eslint-disable-next-line no-unused-vars
+import { it, fit, wait, beforeEach, afterEach } from 'jasmine-fix';
 import { join } from 'path';
 import { provideLinter } from '../lib/main';
 
