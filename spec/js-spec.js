@@ -1,7 +1,7 @@
 'use babel';
 
 // eslint-disable-next-line no-unused-vars
-import { it } from 'jasmine-fix';
+import { it, fit, wait, beforeEach, afterEach } from 'jasmine-fix';
 import { canValidate } from '../lib/main';
 
 describe('Test JS code', () => {
