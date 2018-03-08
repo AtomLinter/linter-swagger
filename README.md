@@ -22,7 +22,7 @@ This package will automatically install `linter` if that is missing.
 
 ## Usage
 
-This package will automatically lint YAML and JSON files that have a `swagger` field
+This package will automatically lint YAML and JSON files that have a `swagger` or `openapi` field
 with a version number value, in accordance to the [Swagger spec](http://swagger.io/specification/).
 
 ## License
