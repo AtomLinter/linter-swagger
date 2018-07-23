@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0
+
+*   Update `swagger-parser` to v5.0.0 (#63)
+
+## 0.4.3
+
+*   Use the entire first line of the file if no range given (#54)
+*   Add the ability to lint OpenAPI specs (#57)
+*   Update `swagger-parser` to v4.1.0 (#60)
+
 ## 0.4.2
 
 *   Update `swagger-parser` to v3.4.2 (#46)
