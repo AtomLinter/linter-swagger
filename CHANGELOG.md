@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+*   Update `swagger-parser` to v5.0.1 (#67)
+
 ## 0.5.0
 
 *   Update `swagger-parser` to v5.0.0 (#63)
