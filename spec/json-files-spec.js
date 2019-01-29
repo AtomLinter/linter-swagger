@@ -29,16 +29,20 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(2);
     expect(messages[0]).toEqual({
-      type: 'Error',
-      text: 'No enum match for: strin',
-      filePath: SAMPLE1,
-      range: [[19, 40], [19, 46]],
+      severity: 'error',
+      excerpt: 'No enum match for: strin',
+      location: {
+        file: SAMPLE1,
+        position: [[19, 40], [19, 46]],
+      },
     });
     expect(messages[1]).toEqual({
-      type: 'Error',
-      text: 'Expected type array but found type string',
-      filePath: SAMPLE1,
-      range: [[19, 40], [19, 46]],
+      severity: 'error',
+      excerpt: 'Expected type array but found type string',
+      location: {
+        file: SAMPLE1,
+        position: [[19, 40], [19, 46]],
+      },
     });
   });
 
@@ -50,10 +54,12 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(1);
     expect(messages[0]).toEqual({
-      type: 'Error',
-      text: 'Additional properties not allowed: forma',
-      filePath: SAMPLE2,
-      range: [[20, 40], [20, 47]],
+      severity: 'error',
+      excerpt: 'Additional properties not allowed: forma',
+      location: {
+        file: SAMPLE2,
+        position: [[20, 40], [20, 47]],
+      },
     });
   });
 
@@ -64,16 +70,20 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(2);
     expect(messages[0]).toEqual({
-      type: 'Error',
-      text: 'Additional properties not allowed: anyOf',
-      filePath: SAMPLE3,
-      range: [[13, 28], [13, 35]],
+      severity: 'Error',
+      excerpt: 'Additional properties not allowed: anyOf',
+      location: {
+        file: SAMPLE3,
+        position: [[13, 28], [13, 35]],
+      },
     });
     expect(messages[1]).toEqual({
-      type: 'Error',
-      text: 'Missing required property: type',
-      filePath: SAMPLE3,
-      range: [[13, 28], [13, 35]],
+      severity: 'error',
+      excerpt: 'Missing required property: type',
+      location: {
+        file: SAMPLE3,
+        position: [[13, 28], [13, 35]],
+      },
     });
   });
 
@@ -85,10 +95,12 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(1);
     expect(messages[0]).toEqual({
-      type: 'Error',
-      text: `Error resolving $ref pointer "${SAMPLE4}#/definitions/INVALIDREFERENCE". \nToken "definitions" does not exist.`,
-      filePath: SAMPLE4,
-      range: undefined,
+      severity: 'Error',
+      excerpt: `Error resolving $ref pointer "${SAMPLE4}#/definitions/INVALIDREFERENCE". \nToken "definitions" does not exist.`,
+      location: {
+        file: SAMPLE4,
+        position: undefined,
+      },
     });
   });
 
@@ -100,10 +112,12 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(1);
     expect(messages[0]).toEqual({
-      type: 'Error',
-      text: 'Additional properties not allowed: descriptio',
-      filePath: SAMPLE5,
-      range: [[13, 6], [13, 18]],
+      severity: 'Error',
+      excerpt: 'Additional properties not allowed: descriptio',
+      location: {
+        file: SAMPLE5,
+        position: [[13, 6], [13, 18]],
+      },
     });
   });
 
@@ -114,10 +128,12 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(2);
     expect(messages[0]).toEqual({
-      type: 'Error',
-      text: 'No enum match for: strin',
-      filePath: SAMPLE6,
-      range: [[19, 20], [19, 26]],
+      severity: 'Error',
+      excerpt: 'No enum match for: strin',
+      location: {
+        file: SAMPLE6,
+        position: [[19, 20], [19, 26]],
+      },
     });
   });
 });
