@@ -70,7 +70,7 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(2);
     expect(messages[0]).toEqual({
-      severity: 'Error',
+      severity: 'error',
       excerpt: 'Additional properties not allowed: anyOf',
       location: {
         file: SAMPLE3,
@@ -95,7 +95,7 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(1);
     expect(messages[0]).toEqual({
-      severity: 'Error',
+      severity: 'error',
       excerpt: `Error resolving $ref pointer "${SAMPLE4}#/definitions/INVALIDREFERENCE". \nToken "definitions" does not exist.`,
       location: {
         file: SAMPLE4,
@@ -112,7 +112,7 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(1);
     expect(messages[0]).toEqual({
-      severity: 'Error',
+      severity: 'error',
       excerpt: 'Additional properties not allowed: descriptio',
       location: {
         file: SAMPLE5,
@@ -128,7 +128,7 @@ describe('Linting JSON files', () => {
 
     expect(messages.length).toEqual(2);
     expect(messages[0]).toEqual({
-      severity: 'Error',
+      severity: 'error',
       excerpt: 'No enum match for: strin',
       location: {
         file: SAMPLE6,
