@@ -30,7 +30,7 @@
   "dependencies": {
     "atom-package-deps": "^5.0.0",
     "lodash": "^4.16.4",
-    "swagger-parser": "5.0.1",
+    "swagger-parser": "5.0.6",
     "yaml-js": "^0.3.0"
   },
   "devDependencies": {
