@@ -6,7 +6,7 @@
 [![Package version!](https://img.shields.io/apm/v/linter-swagger.svg?style=flat)](https://atom.io/packages/linter-swagger)
 
 This plugin for [Linter][linter] will lint
-[Swagger 2.0 specifications][swagger], both JSON and YAML using
+[Swagger 2.0 specifications][swagger] or [OpenAPI 3.0 specifications][openapi], both JSON and YAML using
 [`swagger-parser` node package][swagger-parser].
 
 ## Installation
@@ -30,5 +30,6 @@ with a version number value, in accordance to the [Swagger spec](http://swagger.
 MIT. More info in the [LICENSE file](./LICENSE.md)
 
 [linter]: https://github.com/AtomLinter/Linter "Linter Atom Package"
+[openapi]: https://github.com/OAI/OpenAPI-Specification/ "OpenAPI Specification Main Site"
 [swagger]: http://swagger.io/ "Swagger Main Site"
 [swagger-parser]: https://www.npmjs.com/package/swagger-parser "Swagger Parser NPM Page"
