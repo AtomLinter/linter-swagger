@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0
+
+*   Note support for support OpenAPI 3.0 (#69)
+*   Linter API v2 support (#72)
+
 ## 0.5.1
 
 *   Update `swagger-parser` to v5.0.1 (#67)
