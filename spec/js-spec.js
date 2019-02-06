@@ -1,7 +1,11 @@
 'use babel';
 
-// eslint-disable-next-line no-unused-vars
-import { it, fit, wait, beforeEach, afterEach } from 'jasmine-fix';
+import {
+  // eslint-disable-next-line no-unused-vars
+  it, fit, wait, beforeEach, afterEach,
+} from 'jasmine-fix';
+// NOTE: import/named doesn't seem to understand module exports?
+// eslint-disable-next-line import/named
 import { canValidate } from '../lib/main';
 
 describe('Test JS code', () => {
