@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Open API Sample
+  version: 1.0.0
+paths:
+  /todos:
+    get:
+      description: "Returns all todo items"
+      responses:
+        200:
+          description: "A list of todo items"
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: strin
+                  format: uuid
+                name:
+                  type: string

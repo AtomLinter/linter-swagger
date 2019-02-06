@@ -19,6 +19,30 @@ describe('Linting YAML files', () => {
     await atom.packages.activatePackage('linter-swagger');
   });
 
+  it('Handles no quotes around version', async () => {
+    const OPENAPI = join(__dirname, 'fixtures', 'openapi.yaml');
+    const editor = await atom.workspace.open(OPENAPI);
+    const messages = await lint(editor);
+
+    expect(messages.length).toEqual(2);
+    expect(messages[0]).toEqual({
+      severity: 'error',
+      excerpt: 'Additional properties not allowed: schema',
+      location: {
+        file: OPENAPI,
+        position: [[11, 10], [11, 16]],
+      },
+    });
+    expect(messages[1]).toEqual({
+      severity: 'error',
+      excerpt: 'Missing required property: $ref',
+      location: {
+        file: OPENAPI,
+        position: [[11, 10], [11, 16]],
+      },
+    });
+  });
+
   it('Handles correct input with no errors', async () => {
     const PETSTORE = join(__dirname, 'fixtures', 'petstore.yaml');
     const editor = await atom.workspace.open(PETSTORE);
