@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1
+
+*   Don't require quotes around version (#80)
+
 ## 0.6.0
 
 *   Note support for support OpenAPI 3.0 (#69)

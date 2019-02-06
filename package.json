@@ -1,7 +1,7 @@
 {
   "name": "linter-swagger",
   "main": "./lib/main",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Lint Swagger or OpenAPI files on the fly, using swagger-parser",
   "keywords": [
     "swagger",
