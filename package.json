@@ -28,10 +28,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "atom-package-deps": "^5.0.0",
-    "lodash": "^4.16.4",
+    "atom-package-deps": "5.0.0",
+    "lodash": "4.17.11",
     "swagger-parser": "6.0.5",
-    "yaml-js": "^0.3.0"
+    "yaml-js": "0.3.0"
   },
   "devDependencies": {
     "eslint": "5.13.0",
