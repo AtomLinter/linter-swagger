@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "atom-package-deps": "5.1.0",
-    "lodash": "4.17.11",
+    "lodash": "4.17.14",
     "swagger-parser": "8.0.0",
     "yaml-js": "0.3.0"
   },
